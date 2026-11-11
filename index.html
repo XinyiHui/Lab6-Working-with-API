@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Korean Beverage Shop</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body style="min-height: 100vh; background: #faf7ed url('./img/background.PNG') center / cover no-repeat fixed;">
+  <header>
+    <span>Korean Beverage Shop</span>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div>
+        <h1>Seoul Sips<span>.</span></h1>
+        <p>Explore Korean convenience store drinks and compare prices in won and Canadian dollars.</p>
+      </div>
+
+      <aside aria-label="Exchange rate">
+        <small>DAILY EXCHANGE RATE</small>
+        <strong id="rate">CAD / KRW</strong>
+        <p id="status" role="status">Loading the latest rate…</p>
+        <button id="retry" type="button" hidden>Try again</button>
+      </aside>
+    </section>
+
+    <section aria-labelledby="shelf">
+      <div class="toolbar">
+        <h2 id="shelf">The drink shelf</h2>
+
+        <label for="currency">
+          Show prices in
+          <select id="currency">
+            <option value="KRW">KRW ₩</option>
+            <option value="CAD" disabled>CAD $</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="grid">
+        <article class="card banana">
+          <div class="photo">
+            <img src="img/Bananamilk.PNG" alt="Binggrae banana milk bottle">
+          </div>
+          <div class="label">
+            <p lang="ko">바나나맛우유</p>
+            <h3>Banana Milk</h3>
+            <strong class="price" data-krw="1800">₩1,800</strong>
+          </div>
+        </article>
+
+        <article class="card citrus">
+          <div class="photo">
+            <img src="img/Orangejuice.PNG" alt="Orange can of Jeju citrus soda">
+          </div>
+          <div class="label">
+            <p lang="ko">제주 한라봉 스파클링</p>
+            <h3>Jeju Citrus Soda</h3>
+            <strong class="price" data-krw="1800">₩1,800</strong>
+          </div>
+        </article>
+
+        <article class="card grape">
+          <div class="photo">
+            <img src="img/grapejuice.PNG" alt="Green can of Grape Bong Bong">
+          </div>
+          <div class="label">
+            <p lang="ko">포도봉봉</p>
+            <h3>Grape Bong Bong</h3>
+            <strong class="price" data-krw="1500">₩1,500</strong>
+          </div>
+        </article>
+
+        <article class="card coffee">
+          <div class="photo">
+            <img src="img/Coffee.PNG" alt="Let's Be mocha latte can">
+          </div>
+          <div class="label">
+            <p lang="ko">레쓰비 모카라떼</p>
+            <h3>Mocha Latte</h3>
+            <strong class="price" data-krw="1300">₩1,300</strong>
+          </div>
+        </article>
+
+        <article class="card apple">
+          <div class="photo">
+            <img src="img/Applejuice.PNG" alt="Korean apple juice bottle">
+          </div>
+          <div class="label">
+            <p lang="ko">우리사과</p>
+            <h3>Apple Juice</h3>
+            <strong class="price" data-krw="2200">₩2,200</strong>
+          </div>
+        </article>
+
+        <article class="card milkis">
+          <div class="photo">
+            <img src="img/CreamSoda.PNG" alt="Milkis cream soda bottle">
+          </div>
+          <div class="label">
+            <p lang="ko">밀키스</p>
+            <h3>Milkis Cream Soda</h3>
+            <strong class="price" data-krw="2000">₩2,000</strong>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

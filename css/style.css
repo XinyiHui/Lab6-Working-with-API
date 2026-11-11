@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #faf7ed url("img/background.png") center / cover no-repeat fixed;
+  color: #193e32;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px max(5%, calc((100% - 1080px) / 2));
+  background: #193e32;
+  color: #fff9e8;
+  font-weight: bold;
+}
+
+main,
+footer {
+  width: 90%;
+  max-width: 1080px;
+  margin: auto;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, serif;
+}
+
+.intro,
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.intro {
+  padding: 40px 0 30px;
+  border-bottom: 2px solid #193e32;
+}
+
+h1 {
+  font-size: clamp(56px, 8vw, 96px);
+  line-height: 1;
+  letter-spacing: -3px;
+}
+
+h1 span {
+  color: #c65c27;
+}
+
+.intro p {
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+aside {
+  min-width: 235px;
+  padding: 16px 20px;
+  background: #f1e5bd;
+  border-left: 4px solid #bd662c;
+}
+
+aside small {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#rate {
+  display: block;
+  margin-top: 8px;
+  font-size: 22px;
+}
+
+#status {
+  font-size: 13px;
+}
+
+#retry {
+  margin-top: 8px;
+}
+
+.toolbar {
+  margin: 24px 0 18px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+label {
+  font-size: 14px;
+}
+
+select,
+button {
+  padding: 7px 10px;
+  border: 1px solid #738478;
+  border-radius: 4px;
+  background: #fffdf5;
+  color: #193e32;
+  font: inherit;
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  overflow: hidden;
+  border: 1px solid #c8c9b9;
+  border-radius: 10px;
+  background: #fffdf7;
+}
+
+.photo {
+  display: grid;
+  place-items: center;
+  height: 175px;
+}
+
+.photo img {
+  width: 80%;
+  height: 145px;
+  object-fit: contain;
+}
+
+.banana .photo { background: #f3e8a4; }
+.citrus .photo { background: #f7cc9f; }
+.grape .photo  { background: #cddcaa; }
+.coffee .photo { background: #e3cabb; }
+.apple .photo  { background: #efd0be; }
+.milkis .photo { background: #cde3e7; }
+
+.label {
+  padding: 14px 18px 18px;
+}
+
+.label p {
+  color: #506353;
+  font-size: 13px;
+}
+
+h3 {
+  margin: 4px 0 10px;
+  font-size: 23px;
+}
+
+.price {
+  font-size: 17px;
+}
+
+footer {
+  padding: 26px 0;
+  font-size: 13px;
+}
+
+footer a {
+  color: inherit;
+}
+
+
+@media (max-width: 760px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .intro {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .photo {
+    height: 135px;
+  }
+
+  .photo img {
+    height: 110px;
+  }
+
+  .label {
+    padding: 12px;
+  }
+
+  h3 {
+    font-size: 19px;
+  }
+}
+#shelf {
+  position: relative;
+  top: -4px;
+}
+.toolbar label {
+  font-weight: 800;
+}
+
+.toolbar select {
+  font-weight: 1000;
+}
+.intro,
+.toolbar {
+  background-color: rgba(255, 252, 242, 0.9);
+  border-radius: 10px;
+}
+
+.intro {
+  padding: 24px;
+}
+
+.toolbar {
+  padding: 12px 18px;
+}
